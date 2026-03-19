@@ -92,7 +92,7 @@ struct AcceptedSocket* acceptClient(int serverSocketFD) {
 int main(void) {
     int serverSocketFD = createIPv4TCPSocket();
     struct sockaddr_in* serverAddress =
-        createIPv4TCPAddress("127.0.0.1", 2000);
+        createIPv4TCPAddress("127.0.0.1",3000);
 
     int res = bind(serverSocketFD, (struct sockaddr*)serverAddress, sizeof(*serverAddress));
     if(res == 0) 

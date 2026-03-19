@@ -77,7 +77,7 @@ void *receiveMessages(void* arg) { // the pthread_create function should have: v
 int main(void) {
 
     int socketFD = createIPv4TCPSocket();
-    struct sockaddr_in *address = createIPv4TCPAddress("127.0.0.1", 2000);
+    struct sockaddr_in *address = createIPv4TCPAddress("127.0.0.1", 3000);
 
     if (connect(socketFD, (struct sockaddr*)address, sizeof(*address)) == 0)
         printf("Connection successful\n");

@@ -12,7 +12,7 @@ struct sockaddr_in *createIPv4TCPAddress(const char *ip, int port) {
     struct sockaddr_in *address = malloc(sizeof(struct sockaddr_in));
 
     address->sin_family = AF_INET;
-    address->sin_port = htons(port);
+    address->sin_port = htons(port); //must be in Network byte order (Big endian)
     if(strlen(ip) == 0) 
         address->sin_addr.s_addr = INADDR_ANY; //listen for any incoming address
     else 
