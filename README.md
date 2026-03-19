@@ -1,4 +1,4 @@
-# TCP Chat Server (C)
+# Conduit
 
 A simple multithreaded TCP chat server written in C using POSIX sockets and pthreads.
 
@@ -14,7 +14,24 @@ A simple multithreaded TCP chat server written in C using POSIX sockets and pthr
 ## Build Instructions
 
 ```bash
-mkdir build
-cd build
-cmake ..
+cmake -B build/
+cmake --build build
+```
+
+## Run Instructions
+
+### server
+
+```bash
+cd build/Server
 make
+./Server
+```
+
+### Client
+
+```bash
+cd build/Client
+make
+./Client
+```
